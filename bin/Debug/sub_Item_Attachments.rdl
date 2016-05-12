@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="list1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>7.5in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>8.6in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="list1_Contents">
+                      <ReportItems>
+                        <Image Name="image2">
+                          <Source>Database</Source>
+                          <Value>=Fields!Stored_File.Value</Value>
+                          <MIMEType>=Fields!MIMEType.Value</MIMEType>
+                          <Sizing>FitProportional</Sizing>
+                          <Height>8.6in</Height>
+                          <Width>7.5in</Width>
+                          <Style />
+                        </Image>
+                      </ReportItems>
+                      <KeepTogether>true</KeepTogether>
+                      <Style />
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="list1_Details_Group">
+                <DataElementName>Item</DataElementName>
+              </Group>
+              <DataElementName>Item_Collection</DataElementName>
+              <DataElementOutput>Output</DataElementOutput>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>Balfour_Planning_System</DataSetName>
+        <Height>8.6in</Height>
+        <Width>7.5in</Width>
+        <Style />
+      </Tablix>
+    </ReportItems>
+    <Height>8.6in</Height>
+    <Style />
+  </Body>
+  <Width>7.5in</Width>
+  <Page>
+    <PageHeight>8in</PageHeight>
+    <PageWidth>7.5in</PageWidth>
+    <InteractiveHeight>11in</InteractiveHeight>
+    <InteractiveWidth>8.5in</InteractiveWidth>
+    <LeftMargin>0.5in</LeftMargin>
+    <RightMargin>0.5in</RightMargin>
+    <BottomMargin>0.5in</BottomMargin>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="Balfour_Planning_System">
+      <DataSourceReference>Balfour_Planning_System</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>124f683c-346a-4aae-a362-cc57bebf07b7</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Balfour_Planning_System">
+      <Query>
+        <DataSourceName>Balfour_Planning_System</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@ItemID">
+            <Value>=Parameters!ItemID.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT        tbl_File_Info.Link_ID, tbl_Files.Stored_File, tbl_Files.MIMEType, tbl_File_Info.PEM_PDF_ID
+FROM            tbl_File_Info INNER JOIN
+                         tbl_Files ON tbl_File_Info.ID = tbl_Files.File_Info_ID
+WHERE        (tbl_File_Info.Table_ID = 7) AND (tbl_File_Info.Prints = 1) AND (tbl_File_Info.Thumbnail = 0) AND (tbl_File_Info.Link_ID = @ItemID) AND 
+                         (tbl_Files.MIMEType &lt;&gt; 'application/pdf') AND (NOT (tbl_File_Info.PEM_PDF_ID IS NULL))</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Link_ID">
+          <DataField>Link_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Stored_File">
+          <DataField>Stored_File</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="MIMEType">
+          <DataField>MIMEType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PEM_PDF_ID">
+          <DataField>PEM_PDF_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="ItemID">
+      <DataType>String</DataType>
+      <Prompt>ItemID</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Language>en-US</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>47cdd8bc-9dac-4fa4-8567-b93fd6897e01</rd:ReportID>
+</Report>
