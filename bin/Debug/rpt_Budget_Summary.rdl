@@ -1246,7 +1246,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=SUM(Fields!Discount.Value)</Value>
+                              <Value>=FIRST(Fields!DiscountTotal.Value, "DiscountDS")</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -4382,6 +4382,42 @@ WHERE        (tbl_Projects.ID = @ProjID)</CommandText>
         <Field Name="ReportFooter">
           <DataField>ReportFooter</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="DiscountDS">
+      <Query>
+        <DataSourceName>Balfour_Planning_System</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@Where">
+            <Value>=Parameters!Where.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@ReportType">
+            <Value>=Parameters!ReportType.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>DECLARE @SQL AS varchar(8000)
+
+SET @SQL = 'SELECT SUM(Discount) DiscountTotal FROM (SELECT        tbl_Requisitions.ID, tbl_Requisitions.Discount
+FROM            tbl_Req_Room_Items INNER JOIN
+                         tbl_Items INNER JOIN
+                         tbl_Projects ON tbl_Items.Project_ID = tbl_Projects.ID INNER JOIN
+                         tbl_Departments ON tbl_Projects.ID = tbl_Departments.Project_ID INNER JOIN
+                         tbl_Rooms ON tbl_Departments.ID = tbl_Rooms.Department_ID INNER JOIN
+                         tbl_Room_Items ON tbl_Items.ID = tbl_Room_Items.Item_ID AND tbl_Rooms.ID = tbl_Room_Items.Room_ID ON tbl_Req_Room_Items.Room_ID = tbl_Room_Items.Room_ID AND 
+                         tbl_Req_Room_Items.Item_ID = tbl_Room_Items.Item_ID INNER JOIN
+                         tbl_Requisitions ON tbl_Req_Room_Items.Req_ID = tbl_Requisitions.ID LEFT OUTER JOIN
+                         tbl_Manufacturers ON tbl_Manufacturers.ID = tbl_Items.Manufacturer_ID LEFT OUTER JOIN
+                         tbl_Vendors ON tbl_Vendors.ID = tbl_Items.Vendor_ID
+' + @Where + ' AND (' + CAST(@ReportType As char(1)) + ' = 0) AND (tbl_Room_Items.Active = 1) AND (tbl_Departments.Active = 1) AND (tbl_Rooms.Active = 1)
+GROUP BY tbl_Requisitions.ID, tbl_Requisitions.Discount) tGrouping'
+
+EXEC(@SQL);</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="DiscountTotal">
+          <DataField>DiscountTotal</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>

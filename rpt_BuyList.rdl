@@ -23,7 +23,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.5in</Width>
+              <Width>0.6in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.9in</Width>
@@ -35,10 +35,10 @@
               <Width>0.7in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.65in</Width>
+              <Width>0.6in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.25in</Width>
+              <Width>2.2in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.8in</Width>
@@ -1091,9 +1091,9 @@
             </Paragraph>
           </Paragraphs>
           <Top>0.06944in</Top>
-          <Left>5.7in</Left>
+          <Left>5in</Left>
           <Height>0.2in</Height>
-          <Width>1.8in</Width>
+          <Width>2.5in</Width>
           <Style>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
@@ -1122,9 +1122,9 @@
           </Paragraphs>
           <rd:DefaultName>textbox48</rd:DefaultName>
           <Top>0.06944in</Top>
-          <Left>2.7in</Left>
+          <Left>2.5in</Left>
           <Height>0.2in</Height>
-          <Width>2in</Width>
+          <Width>2.5in</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <PaddingLeft>2pt</PaddingLeft>
@@ -1154,7 +1154,7 @@
           </Paragraphs>
           <Top>0.06944in</Top>
           <Height>0.2in</Height>
-          <Width>1.8in</Width>
+          <Width>2.5in</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <PaddingLeft>2pt</PaddingLeft>

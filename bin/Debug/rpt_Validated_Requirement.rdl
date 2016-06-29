@@ -451,11 +451,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!PRCRequirement.Value-Fields!ValidatedRequirement.Value</Value>
+                              <Value>=Fields!ValidatedRequirement.Value-Fields!PRCRequirement.Value</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>8pt</FontSize>
-                                <Color>=Code.DeltaColor(Fields!PRCRequirement.Value-Fields!ValidatedRequirement.Value)</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -475,6 +474,7 @@
                         <BottomBorder>
                           <Style>Solid</Style>
                         </BottomBorder>
+                        <BackgroundColor>=Code.DeltaColor(Fields!ValidatedRequirement.Value-Fields!PRCRequirement.Value)</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -757,9 +757,9 @@
             </Paragraph>
           </Paragraphs>
           <Top>0.06944in</Top>
-          <Left>5.65in</Left>
+          <Left>5in</Left>
           <Height>0.2in</Height>
-          <Width>1.85in</Width>
+          <Width>2.5in</Width>
           <Style>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
@@ -788,9 +788,9 @@
           </Paragraphs>
           <rd:DefaultName>textbox48</rd:DefaultName>
           <Top>0.06944in</Top>
-          <Left>2.67667in</Left>
+          <Left>2.5in</Left>
           <Height>0.2in</Height>
-          <Width>2in</Width>
+          <Width>2.5in</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <PaddingLeft>2pt</PaddingLeft>
@@ -819,9 +819,8 @@
             </Paragraph>
           </Paragraphs>
           <Top>0.06944in</Top>
-          <Left>0.01in</Left>
           <Height>0.2in</Height>
-          <Width>1.85in</Width>
+          <Width>2.5in</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <PaddingLeft>2pt</PaddingLeft>
@@ -959,9 +958,9 @@ WHERE     (ID = @ProjID)</CommandText>
   </ReportParameters>
   <Code>Function DeltaColor(ByVal iTotal as Integer) As String
 	If iTotal &lt; 0 Then
-		Return "Red"
+		Return "Pink"
 	ElseIf iTotal &gt; 0 Then
-		Return "Brown"
+		Return "Yellow"
 	Else
 		Return "Green"
 	End If

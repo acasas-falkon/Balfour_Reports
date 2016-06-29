@@ -3,7 +3,6 @@
   <ConnectionProperties>
     <Extension>SQL</Extension>
     <ConnectString>Data Source=FLK-SQL-2008;Initial Catalog=Balfour_Planning_System</ConnectString>
-    <IntegratedSecurity>true</IntegratedSecurity>
   </ConnectionProperties>
   <DataSourceID>2b3b3f84-5e0f-460a-922c-3c0c88fa6645</DataSourceID>
 </RptDataSource>
