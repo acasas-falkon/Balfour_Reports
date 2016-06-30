@@ -213,7 +213,7 @@ WHERE     (ID = @ProjID)</CommandText>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Room_Num">
+                        <Textbox Name="Room_Num3">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -259,7 +259,7 @@ WHERE     (ID = @ProjID)</CommandText>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Room_Name">
+                        <Textbox Name="Room_Name2">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -2592,6 +2592,16 @@ WHERE     (ID = @ProjID)</CommandText>
             <TablixRowHierarchy>
               <TablixMembers>
                 <TablixMember>
+                  <HideIfNoRows>true</HideIfNoRows>
+                  <KeepWithGroup>After</KeepWithGroup>
+                  <RepeatOnNewPage>true</RepeatOnNewPage>
+                </TablixMember>
+                <TablixMember>
+                  <HideIfNoRows>true</HideIfNoRows>
+                  <KeepWithGroup>After</KeepWithGroup>
+                  <RepeatOnNewPage>true</RepeatOnNewPage>
+                </TablixMember>
+                <TablixMember>
                   <Group Name="grp_Department">
                     <GroupExpressions>
                       <GroupExpression>=Fields!DeptID.Value</GroupExpression>
@@ -2608,14 +2618,6 @@ WHERE     (ID = @ProjID)</CommandText>
                     </SortExpression>
                   </SortExpressions>
                   <TablixMembers>
-                    <TablixMember>
-                      <KeepWithGroup>After</KeepWithGroup>
-                      <RepeatOnNewPage>true</RepeatOnNewPage>
-                    </TablixMember>
-                    <TablixMember>
-                      <KeepWithGroup>After</KeepWithGroup>
-                      <RepeatOnNewPage>true</RepeatOnNewPage>
-                    </TablixMember>
                     <TablixMember>
                       <KeepWithGroup>After</KeepWithGroup>
                       <RepeatOnNewPage>true</RepeatOnNewPage>
@@ -2707,6 +2709,7 @@ WHERE     (ID = @ProjID)</CommandText>
             <PageBreak>
               <BreakLocation>End</BreakLocation>
             </PageBreak>
+            <Top>0.05in</Top>
             <Height>3.7in</Height>
             <Width>10in</Width>
             <Style>
@@ -2724,14 +2727,14 @@ WHERE     (ID = @ProjID)</CommandText>
               </Parameter>
             </Parameters>
             <KeepTogether>true</KeepTogether>
-            <Top>3.85in</Top>
+            <Top>5.77708in</Top>
             <Height>0.125in</Height>
             <Width>10in</Width>
             <ZIndex>1</ZIndex>
             <Style />
           </Subreport>
         </ReportItems>
-        <Height>4.03125in</Height>
+        <Height>6.5875in</Height>
         <Style />
       </Body>
       <Width>10in</Width>
