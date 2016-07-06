@@ -2,7 +2,8 @@
 <RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Balfour_Planning_System">
   <ConnectionProperties>
     <Extension>SQL</Extension>
-    <ConnectString>Data Source=FLK-SQL-2008;Initial Catalog=Balfour_Planning_System</ConnectString>
+    <ConnectString>Data Source=sql01-covalus.falkon.host;Initial Catalog=StagingBRGEQUIP</ConnectString>
+    <IntegratedSecurity>true</IntegratedSecurity>
   </ConnectionProperties>
   <DataSourceID>2b3b3f84-5e0f-460a-922c-3c0c88fa6645</DataSourceID>
 </RptDataSource>
