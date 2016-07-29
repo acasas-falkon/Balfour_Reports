@@ -39,12 +39,20 @@
       <FullPath>rpt_Contractor_RBR.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>rpt_Contractor_RBR_RoomNumName.rdl</Name>
+      <FullPath>rpt_Contractor_RBR_RoomNumName.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>rpt_Contractor_RBR_RoomNumName-v2.rdl</Name>
       <FullPath>rpt_Contractor_RBR_RoomNumName-v2.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>rpt_Contractor_RBR_RoomNumName.rdl</Name>
-      <FullPath>rpt_Contractor_RBR_RoomNumName.rdl</FullPath>
+      <Name>rpt_Contractor_RBR_RoomNumName-v3.rdl</Name>
+      <FullPath>rpt_Contractor_RBR_RoomNumName-v3.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>rpt_Contractor_RBR_RoomNumName-v3_Sub.rdl</Name>
+      <FullPath>rpt_Contractor_RBR_RoomNumName-v3_Sub.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>rpt_Department_List.rdl</Name>
@@ -350,14 +358,6 @@
       <Name>sub_Water_Category.rdl</Name>
       <FullPath>sub_Water_Category.rdl</FullPath>
     </ProjectItem>
-    <ProjectItem>
-      <Name>rpt_Contractor_RBR_RoomNumName-v3.rdl</Name>
-      <FullPath>rpt_Contractor_RBR_RoomNumName-v3.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>rpt_Contractor_RBR_RoomNumName-v3_Sub.rdl</Name>
-      <FullPath>rpt_Contractor_RBR_RoomNumName-v3_Sub.rdl</FullPath>
-    </ProjectItem>
   </Reports>
   <Configurations>
     <Configuration>
@@ -367,8 +367,8 @@
         <OutputPath>bin\Debug</OutputPath>
         <TargetServerVersion>SSRS2008R2</TargetServerVersion>
         <TargetServerURL>http://sql01-covalus.falkon.host/ReportServer</TargetServerURL>
-        <TargetFolder>BRGEquipWare</TargetFolder>
-        <TargetDataSourceFolder>BRGEquipWare</TargetDataSourceFolder>
+        <TargetFolder>EquipWareStaging</TargetFolder>
+        <TargetDataSourceFolder>EquipWareStaging</TargetDataSourceFolder>
       </Options>
     </Configuration>
     <Configuration>
