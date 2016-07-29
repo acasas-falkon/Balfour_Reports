@@ -147,9 +147,11 @@
             <Value>=Parameters!ProjID.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>SELECT     ID, Project_Name, Facility_Name, ReportFooter
-FROM         tbl_Projects
-WHERE     (ID = @ProjID)</CommandText>
+        <CommandText>
+          SELECT     ID, Project_Name, Facility_Name, ReportFooter
+          FROM         tbl_Projects
+          WHERE     (ID = @ProjID)
+        </CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <Fields>
@@ -208,6 +210,98 @@ WHERE     (ID = @ProjID)</CommandText>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
+                <TablixRow>
+                  <Height>1.3in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Room_Num">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=ReportItems!txtRoomNum.Value</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                    <FontSize>72pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Room_Num</rd:DefaultName>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>9</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.5in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Room_Name">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=ReportItems!txtRoomName.Value</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                    <FontSize>26pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Room_Name</rd:DefaultName>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>9</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
                 <TablixRow>
                   <Height>0.2in</Height>
                   <TablixCells>
@@ -1042,13 +1136,13 @@ WHERE     (ID = @ProjID)</CommandText>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="txtRoomNum2">
+                        <Textbox Name="txtRoomNum">
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!Room_Num.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1073,14 +1167,14 @@ WHERE     (ID = @ProjID)</CommandText>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="txtRoomName2">
+                        <Textbox Name="txtRoomName">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!Room_Name.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1783,14 +1877,14 @@ WHERE     (ID = @ProjID)</CommandText>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="txtRoomNum">
+                        <Textbox Name="textbox94">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Room_Num.Value</Value>
+                                  <Value />
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1802,10 +1896,8 @@ WHERE     (ID = @ProjID)</CommandText>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
+                          <rd:DefaultName>textbox94</rd:DefaultName>
                           <ZIndex>7</ZIndex>
-                          <Visibility>
-                            <Hidden>true</Hidden>
-                          </Visibility>
                           <Style>
                             <BottomBorder>
                               <Color>Black</Color>
@@ -1821,14 +1913,14 @@ WHERE     (ID = @ProjID)</CommandText>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="txtRoomName">
+                        <Textbox Name="textbox96">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Room_Name.Value</Value>
+                                  <Value />
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1840,10 +1932,8 @@ WHERE     (ID = @ProjID)</CommandText>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
+                          <rd:DefaultName>textbox96</rd:DefaultName>
                           <ZIndex>6</ZIndex>
-                          <Visibility>
-                            <Hidden>true</Hidden>
-                          </Visibility>
                           <Style>
                             <BottomBorder>
                               <Color>Black</Color>
@@ -2523,6 +2613,14 @@ WHERE     (ID = @ProjID)</CommandText>
                     <TablixMember>
                       <KeepWithGroup>After</KeepWithGroup>
                       <RepeatOnNewPage>true</RepeatOnNewPage>
+                    </TablixMember>
+                    <TablixMember>
+                      <KeepWithGroup>After</KeepWithGroup>
+                      <RepeatOnNewPage>true</RepeatOnNewPage>
+                    </TablixMember>
+                    <TablixMember>
+                      <KeepWithGroup>After</KeepWithGroup>
+                      <RepeatOnNewPage>true</RepeatOnNewPage>
                       <KeepTogether>true</KeepTogether>
                     </TablixMember>
                     <TablixMember>
@@ -2611,7 +2709,7 @@ WHERE     (ID = @ProjID)</CommandText>
             <PageBreak>
               <BreakLocation>End</BreakLocation>
             </PageBreak>
-            <Height>1.9in</Height>
+            <Height>3.7in</Height>
             <Width>10in</Width>
             <Style>
               <TopBorder>
@@ -2628,20 +2726,20 @@ WHERE     (ID = @ProjID)</CommandText>
               </Parameter>
             </Parameters>
             <KeepTogether>true</KeepTogether>
-            <Top>1.96944in</Top>
+            <Top>3.85in</Top>
             <Height>0.125in</Height>
             <Width>10in</Width>
             <ZIndex>1</ZIndex>
             <Style />
           </Subreport>
         </ReportItems>
-        <Height>2.17778in</Height>
+        <Height>4.03125in</Height>
         <Style />
       </Body>
       <Width>10in</Width>
       <Page>
         <PageHeader>
-          <Height>2.6825in</Height>
+          <Height>0.62in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -2722,70 +2820,6 @@ WHERE     (ID = @ProjID)</CommandText>
               <Width>1.9in</Width>
               <ZIndex>2</ZIndex>
               <Style />
-            </Textbox>
-            <Textbox Name="Room_Num2">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=ReportItems!txtRoomNum.Value</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>72pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Room_Num</rd:DefaultName>
-              <Top>0.7in</Top>
-              <Height>1.3in</Height>
-              <Width>10in</Width>
-              <ZIndex>3</ZIndex>
-              <Style>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Room_Name2">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=ReportItems!txtRoomName.Value</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>26pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Room_Name</rd:DefaultName>
-              <Top>2.01389in</Top>
-              <Height>0.5in</Height>
-              <Width>10in</Width>
-              <ZIndex>4</ZIndex>
-              <Style>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
             </Textbox>
           </ReportItems>
           <Style />

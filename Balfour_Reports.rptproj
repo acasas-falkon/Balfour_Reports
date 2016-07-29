@@ -35,6 +35,14 @@
       <FullPath>rpt_Contingency_Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>rpt_Contractor_RBR.rdl</Name>
+      <FullPath>rpt_Contractor_RBR.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>rpt_Contractor_RBR_RoomNumName-v2.rdl</Name>
+      <FullPath>rpt_Contractor_RBR_RoomNumName-v2.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>rpt_Contractor_RBR_RoomNumName.rdl</Name>
       <FullPath>rpt_Contractor_RBR_RoomNumName.rdl</FullPath>
     </ProjectItem>
@@ -343,8 +351,12 @@
       <FullPath>sub_Water_Category.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>rpt_Contractor_RBR.rdl</Name>
-      <FullPath>rpt_Contractor_RBR.rdl</FullPath>
+      <Name>rpt_Contractor_RBR_RoomNumName-v3.rdl</Name>
+      <FullPath>rpt_Contractor_RBR_RoomNumName-v3.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>rpt_Contractor_RBR_RoomNumName-v3_Sub.rdl</Name>
+      <FullPath>rpt_Contractor_RBR_RoomNumName-v3_Sub.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
@@ -355,8 +367,8 @@
         <OutputPath>bin\Debug</OutputPath>
         <TargetServerVersion>SSRS2008R2</TargetServerVersion>
         <TargetServerURL>http://sql01-covalus.falkon.host/ReportServer</TargetServerURL>
-        <TargetFolder>EquipWareStaging</TargetFolder>
-        <TargetDataSourceFolder>EquipWareStaging</TargetDataSourceFolder>
+        <TargetFolder>BRGEquipWare</TargetFolder>
+        <TargetDataSourceFolder>BRGEquipWare</TargetDataSourceFolder>
       </Options>
     </Configuration>
     <Configuration>
